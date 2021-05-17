@@ -1,1 +1,0 @@
-# naylamota.github.io
