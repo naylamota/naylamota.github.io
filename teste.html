@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Tabs - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+</script>
+</head>
+<body>
+    <div id="tabs">
+        <ul>
+            <li><a href="#aba-1">Aba 1</a></li>
+            <li><a href="#aba-2">Aba 2</a></li>
+            <li><a href="#aba-3">Aba 3</a></li>
+        </ul>
+        <div id="aba-1">
+            <p>Conteudo da aba 1.</p>
+        </div>
+        <div id="aba-2">
+            <p>Conteudo da aba 2.</p>
+        </div>
+        <div id="aba-3">
+            <p>Conteudo da aba 3.</p>
+        </div>
+    </div>
+ 
+</body>
+</html>
