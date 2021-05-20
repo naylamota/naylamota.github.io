@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Jquery : utilizar um scroll que a partir de  400px do topo do body apareça uma seta ao lado direito da pagina que funciona como retorno suave para o inicio da pagina , aplicar essa função na pagina inicial do projeto.
+JavaScript: validação de cnpj/cpf. = validação na página
+Css: Estilizar o rodapé usando exclusivamente css.= rodapé
+HTML: Utilizar <aside> e <article> = article em textos principais e aside na seta -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="..//js/javascript.js">
+    </script>
+
+    <style>
+        @media screen and (max-width:550px) {
+            #caixadeServicos {
+                font-size: 15px;
+                padding-left: 30px;
+            }
+            #tituloservicos1 {
+                margin-left: 40px;
+            }
+            #tituloservicos2 {
+                margin-left: 40px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            #primeiraImagem {
+                background-image: url('..//imagens/fios.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #segundaImagem {
+                background-image: url('..//imagens/instalaçoes\ eletrica.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #terceiraImagem {
+                background-image: url('..//imagens/painel.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #quartaImagem {
+                background-image: url('../imagens/i\ agree.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            /* define a altura das div do carousel  */
+            .carousel-inner div {
+                width: 100%;
+                height: 100px;
+            }
+            /* isso define a altura do carrosel */
+            .carousel-inner {
+                height: 200px;
+            }
+            #nossoObjetivo {
+                font-size: 50px;
+            }
+            #textoInicial {
+                font-size: 20px;
+                line-height: 0px;
+            }
+            #textoInicial2 {
+                font-size: 20px;
+                line-height: 0px;
+            }
+            #textoInicial4 {
+                font-size: 20px;
+                line-height: 0px;
+            }
+            /* início do rodapé versão mobile */
+            #paifooter {
+                font-size: 2px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #contato {
+                padding: 0;
+                margin: 0;
+            }
+            #redesocial img {
+                width: 45px;
+                height: 45px;
+                padding: 7px;
+            }
+            #logofooter {
+                width: 90px;
+            }
+            /* final do rodapé versão mobile */
+        }
+        
+        body {
+            background-color: #edf6f9;
+        }
+        
+        #setafluida {
+            position: fixed;
+            right: 0;
+            top: 220px;
+        }
+        
+        #fundodaNavbar {
+            background-color: #004a8bd8;
+        }
+        
+        #logo {
+            width: 70px;
+            height: auto;
+        }
+        
+        #textoInicial {
+            line-height: 67px;
+            letter-spacing: 2px;
+        }
+        
+        #textoInicial2 {
+            line-height: 67px;
+            letter-spacing: 2px;
+        }
+        
+        #textoInicial3 {
+            line-height: 67px;
+            letter-spacing: 2px;
+        }
+        
+        #textoInicial4 {
+            line-height: 67px;
+            letter-spacing: 2px;
+        }
+        
+        footer {
+            display: grid;
+            grid-template-columns: 4;
+            margin-bottom: 0;
+            background-color: #1a5b92;
+            margin-top: 10px;
+        }
+        
+        #paifooter {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        #contato {
+            grid-column-start: 1/2;
+            padding: 10px;
+            margin: 10px;
+            font-size: 22px;
+        }
+        
+        #redesocial {
+            grid-column-start: 2/3;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        #logofooter {
+            grid-column-start: 3/4;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        .carousel-inner img {
+            width: 100%;
+            height: 700px;
+        }
+        
+        .carousel-inner div {
+            width: 100%;
+            height: 1000px;
+        }
+        
+        #primeiraImagem {
+            background-image: url('..//imagens/fios.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #segundaImagem {
+            background-image: url('..//imagens/instalaçoes\ eletrica.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #terceiraImagem {
+            background-image: url('..//imagens/painel.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #quartaImagem {
+            background-image: url('../imagens/i\ agree.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <link rel="shortcut icon" href="..//icones/logomarca.png">
+    <title>Lótus Engenharia</title>
+
+</head>
+
+<body>
+    <aside>
+        <a id="topo"> </a>
+
+        <a href="#topo">
+            <div>
+                <img src="../imagens/seta-dupla-para-cima.png" alt="" id="setafluida" style="width: 40px; height: 40px;">
+            </div>
+        </a>
+    </aside>
+
+    <!--------------------------- COMEÇA O HEADER-------------------------->
+    <nav id="fundodaNavbar" class="navbar navbar-expand-lg navbar-dark justify-content-around">
+
+        <a class="navbar-brand" href="#"><img src="..//icones/logomarca.png" alt="logo" class="img-fluid mr-2" id="logo">Lótus Engenharia</a>
+        <button id="boTaoDomenu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+
+        </span>
+        </button>
+        <div class="navbar" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="servicos.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>
+                    <div id="caixadeServicos" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div id="tituloservicos1" class="dropdown-item-text text-dark">Consultoria
+                            <div>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Acompanhamento de Perícias</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">AET (Análise Ergonômica de Trabalho)</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Gestão de Energia</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Inspeção em PDA (Proteção de descargas Atmosféricas)</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Laudo de Aterramento Elétrico</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Laudo de inspeção Elétrica</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Laudos em Segurança do Trabalho</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">LTCAT (Laudo Técnico das Condições do Ambiente de Trabalho)</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">PPRA (Programa de Prevenção de Riscos Ambientais)</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Prontuário de Instalação Elétrica</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Treinamento NR-10</a>
+                            </div>
+                        </div>
+
+
+                        <div class="dropdown-divider"></div>
+
+                        <div id="tituloservicos2" class="dropdown-item-text pl-3 pr-0 text-dark">Projetos
+                            <div>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Aterramento</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Cabeamento Estruturado</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Eficiência Energética</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Grupo Gerador</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Instalações Elétricas</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Sistema de combate ao incêndio</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Sistema Solar Fotovoltaico</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">SPDA (Sistemas de Proteção de Descargas Atmosféricas)</a>
+                                <a class="dropdown-item text-secondary" href="servicos.html">Subestações Elétricas Aéreas e Abrigadas</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="sobrenos.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faleconosco.html">Fale Conosco</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- USEI ASIDE AQUI-->
+
+    <!-- -----------------------ACABA O HEADER----------------------- -->
+    <!-- CAROUSEL -->
+    <div id="slide" class="carousel slide fade show" data-ride="carousel">
+
+        <!-- Indicadores -->
+        <ul class="carousel-indicators">
+            <li data-target="#slide" data-slide-to="0" class="active"></li>
+            <li data-target="#slide" data-slide-to="1"></li>
+            <li data-target="#slide" data-slide-to="2"></li>
+            <li data-target="#slide" data-slide-to="3"></li>
+        </ul>
+
+        <!-- Slide -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div id="primeiraImagem">
+                    <!-- <img class="d-block w-100" src="..//imagens/fios.jpg" alt=""> -->
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div id="segundaImagem">
+                    <!-- <img class="d-block" src="..//imagens/instalaçoes\ eletrica.jpg" alt=""> -->
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div id="terceiraImagem">
+                    <!-- <img class="d-block " src="..//imagens/painel.jpg" alt=""> -->
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div id="quartaImagem">
+                    <!-- <img class="d-block " src="..//imagens/i\ agree.png" alt=""> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#slide" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#slide" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+    <script type="text/javascript">
+        // funcao para controlar o intervalo do carousel
+        $('.carousel').carousel({
+            interval: 3500
+        })
+    </script>
+    <!-- ACABA O CAROUSEL -->
+
+    <!-- utilizei o article -->
+    <article>
+        <p class="container-fluid display-2 text-center text-capitalize" id="nossoObjetivo">Nosso objetivo:
+            <p class="container h2 text-justify mt-5 text-dark" id="textoInicial">Desenvolvemos projetos de Média e Baixa tensão, realizamos consultorias, inspeções, laudos e parecer técnico nos campos da engenharia elétrica e de segurança do trabalho, atuando na área comercial, industrial, hospitalar, predial e residencial.</p>
+            <p class="container h2 text-justify mt-5 text-dark" id="textoInicial2">Focando em pequenas, médias e grandes empresas, nós da Lótus estaremos presentes a fim de suprir a necessidade de instalações elétricas bem como manutenções em redes domésticas, hospitalares, prediais e/ou condomínios.</p>
+            <p class="container h2 text-justify mt-5 text-dark" id="textoInicial3"> Porque nos contratar? </p>
+            <p class="container h4 text-justify mt-2" id="textoInicial4">Utilização do <em>Software Autodesk Revit</em> permite maior precisão, projetos mais elaborados em 3D, fluidez e qualidade aos nossos clientes. Com a tecnologia BIM (Building Information Modeling, do portuguêsModelagem da Informação da Construção),
+                é possível envolver desde o início ao fim da edificação, desde a viabilidade até a demolição.</p>
+
+            <hr style="width: 40%; text-align: left; " />
+            <p class="blockquote text-center "> Software Autodesk Revit:</p>
+
+        </p>
+    </article>
+    <div class="row col-12 ">
+
+        <img class="col-6 figure-img img-fluid w-25 " src="..//imagens/revit3.jpeg " alt="impactante1 ">
+        <img class="col-6 figure-img img-fluid w-25 " src="..//imagens/revit2.jpg " alt="impactante2 ">
+    </div>
+
+</body>
+
+<!-- ----------------------- COMEÇA O FOOTER----------------------- -->
+<footer>
+    <div id="paifooter">
+        <div id="contato" class="text-white-50">(85) 9.9981-8820 </br>
+            Email: lotusengenharia.ce@gmail.com </div>
+        <div id="redesocial" class="mt-4 col-3 d-flex justify-content-around">
+            <a href="#"><img style="width: 40px; height: 40px;" src="..//icones/facebook.png" alt="facebook" /> </a>
+
+            <a href="https://www.linkedin.com/in/leonardo-pires-2a958955/"> <img style="width: 40px; height: 40px;" src="..//icones/linkedin(1).png" alt="linkedin" />
+            </a>
+
+            <a href="https://instagram.com/leo.ppires?igshid=1vp90slan9nhd"> <img style="width: 40px; height: 40px;" src="..//icones/instagram.png" alt="instagram" />
+            </a>
+        </div>
+        <div id="logofooter">
+            <img class="img-fluid mr-0" style="width: 100px; height: auto;" src="..//icones/logomarca.png" alt="">
+        </div>
+    </div>
+</footer>
+<!-- ----------------------- ACABA O FOOTER----------------------- -->
+
+</html>
