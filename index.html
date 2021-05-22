@@ -13,7 +13,7 @@ HTML: Utilizar <aside> e <article> = article em textos principais e aside na set
 
     <!-- links de fonts do google -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -88,26 +88,24 @@ HTML: Utilizar <aside> e <article> = article em textos principais e aside na set
                 font-family: 'Roboto', sans-serif;
                 font-weight: 800;
             }
-            /* #article p{
+            #article p{
                 font-size: 20px;
                 letter-spacing: normal;
-                line-height: 47px;
-                font-family: 'Roboto', sans-serif;
+                line-height: 1.9;
+                font-family: sans-serif;
                 font-weight: 500;
-
-            } */
+            }
             #textoInicial {
                 font-size: 20px;
                 letter-spacing: normal;
                 line-height: 40px;
                 font-family: sans-serif;
-
             }
             #textoInicial2 {
                 font-size: 20px;
                 line-height: 0px;
             }
-            #textoInicial3{
+            #textoInicial3 {
                 margin-top: 20px;
                 font-size: 40px;
                 font-family: 'Roboto', sans-serif;
@@ -136,6 +134,13 @@ HTML: Utilizar <aside> e <article> = article em textos principais e aside na set
                 width: 90px;
             }
             /* final do rodapé versão mobile */
+        }
+        
+        @media (min-width:1000px) {
+            /* .imagemRevit {
+                height: 400px;
+            }
+             */
         }
         
         body {
@@ -170,6 +175,8 @@ HTML: Utilizar <aside> e <article> = article em textos principais e aside na set
         #textoInicial3 {
             line-height: 67px;
             letter-spacing: 2px;
+            color: #1a5b92;
+        
         }
         
         #textoInicial4 {
@@ -238,7 +245,6 @@ HTML: Utilizar <aside> e <article> = article em textos principais e aside na set
             max-width: auto;
             height: auto;
         }
-        
     </style>
     <link rel="shortcut icon" href="..//icones/logomarca.png">
     <title>Lótus Engenharia</title>
@@ -265,7 +271,7 @@ HTML: Utilizar <aside> e <article> = article em textos principais e aside na set
 
         </span>
         </button>
-        <div class="navbar-collapse collapse text-right" id="navbarSupportedContent">
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
@@ -327,10 +333,10 @@ HTML: Utilizar <aside> e <article> = article em textos principais e aside na set
 
         <!-- Indicadores -->
         <ul class="carousel-indicators">
-            <li data-target="#slide" data-slide-to="0" class="active"></li>
-            <li data-target="#slide" data-slide-to="1"></li>
-            <li data-target="#slide" data-slide-to="2"></li>
-            <li data-target="#slide" data-slide-to="3"></li>
+            <li data-target="#slide" data-slide-to="0" class="bg-dark active"></li>
+            <li data-target="#slide" data-slide-to="1" class="bg-dark"></li>
+            <li data-target="#slide" data-slide-to="2" class="bg-dark"></li>
+            <li data-target="#slide" data-slide-to="3" class="bg-dark"></li>
         </ul>
 
         <!-- Slide -->
@@ -379,17 +385,18 @@ HTML: Utilizar <aside> e <article> = article em textos principais e aside na set
 
     <!-- utilizei o article -->
     <article>
-        <p class="container-fluid display-2 text-center text-capitalize" id="nossoObjetivo">Nosso objetivo:
-            <div id="article"> 
-            <p class="container h2 text-justify mt-5 text-dark" id="textoInicial">Desenvolvemos <b>projetos elétricos</b> de Média e Baixa tensão, realizamos consultorias, inspeções, laudos e parecer técnico nos campos da engenharia elétrica e de segurança do trabalho, atuando na área comercial, industrial, hospitalar, predial e residencial.</p>
-            <p class="container h2 text-justify mt-5 text-dark" id="textoInicial2">Focando em pequenas, médias e grandes empresas, nós da Lótus estaremos presentes a fim de suprir a necessidade de instalações elétricas bem como manutenções em redes domésticas, hospitalares, prediais e/ou condomínios.</p>
-            <p class="container h2 text-justify mt-5 text-dark" id="textoInicial3"> Porque nos contratar? </p>
-            <p class="container h4 text-justify mt-2" id="textoInicial4">Utilização do <em>Software Autodesk Revit</em> permite maior precisão, projetos mais elaborados em 3D, fluidez e qualidade aos nossos clientes. Com a tecnologia BIM (Building Information Modeling, do portuguêsModelagem da Informação da Construção),
-                é possível envolver desde o início ao fim da edificação, desde a viabilidade até a demolição.</p>
+        <p class="container-fluid display-2 text-center text-capitalize" id="nossoObjetivo">Nosso objetivo
+            <div id="article">
+                <p class="container h2 text-justify mt-5 text-dark" id="textoInicial">Desenvolvemos <b>projetos elétricos</b> de Média e Baixa tensão, realizamos consultorias, inspeções, laudos e parecer técnico nos campos da engenharia elétrica e de segurança do trabalho, atuando na área comercial, industrial, hospitalar,
+                    predial e residencial.</p>
+                <p class="container h2 text-justify mt-5 text-dark" id="textoInicial2">Focando em pequenas, médias e grandes empresas, nós da Lótus estaremos presentes a fim de suprir a necessidade de instalações elétricas bem como manutenções em redes domésticas, hospitalares, prediais e/ou condomínios.</p>
+                <p class="container h2 text-justify mt-5 text-dark" id="textoInicial3"> PORQUE NOS CONTRATAR? </p>
+                <p class="container h4 text-justify mt-2" id="textoInicial4">Utilização do <em>Software Autodesk Revit</em> permite maior precisão, projetos mais elaborados em 3D, fluidez e qualidade aos nossos clientes. Com a tecnologia BIM (Building Information Modeling, do portuguêsModelagem da Informação da
+                    Construção), é possível envolver desde o início ao fim da edificação, desde a viabilidade até a demolição.</p>
 
-            <hr style="width: 40%; text-align: left; " />
-            <p class="blockquote text-center "> Software Autodesk Revit:</p>
-</div>
+                <hr style="width: 40%; text-align: left; " />
+                <p class="blockquote text-center "> Software Autodesk Revit:</p>
+            </div>
         </p>
     </article>
     <!-- <div class="row col-12">
@@ -397,11 +404,16 @@ HTML: Utilizar <aside> e <article> = article em textos principais e aside na set
         <img class="col-6 figure-img img-fluid w-25 " src="..//imagens/revit3.jpeg " alt="impactante1">
         <img class="col-6 figure-img img-fluid w-25 " src="..//imagens/revit2.jpg " alt="impactante2">
     </div> -->
-    
-    <div class="card-columns container">
 
-        <img class="img-fluid" src="..//imagens/revit3.jpeg " alt="impactante1">
-        <img class="img-fluid" src="..//imagens/revit2.jpg " alt="impactante2">
+    <div class="card-group container d-flex imagemRevit">
+
+        <div class="card-img float-left col-6">
+            <img class="img-fluid w-100 imagemRevit1 shadow border rounded" src="..//imagens/revit3.jpeg " alt="impactante1">
+        </div>
+
+        <div class="card-img float-right col-6"> 
+            <img class="img-fluid w-100 imagemRevit2 shadow border rounded" src="..//imagens/revit2.jpg " alt="impactante2">
+        </div>
     </div>
 
 

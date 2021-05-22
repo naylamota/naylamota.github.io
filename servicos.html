@@ -37,6 +37,9 @@
            #tituloservicos2{
                margin-left: 50px;
            }
+           .setinhaCarrosel{
+               background-color: #333;
+           }
         }
         @media screen and (min-width:424px) {
             #caixadeServicos {
@@ -210,11 +213,11 @@
         </a>
     </aside>
     <nav id="fundodaNavbar" class="navbar navbar-expand-lg navbar-dark justify-content-around">
-        <a class="navbar-brand" href="#"><img src="..//icones/logomarca.png" alt="logo" class="img-fluid mr-2" id="logo">Lótus Engenharia</a>
+        <a class="navbar-brand" href="#"><img src="..//icones/logomarca.png" alt="logo" class="img-fluid mr-2" id="logo">Lótus Engenharia Elétrica</a>
         <button id="boTaoDomenu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
       </button>
-        <div class="navbar" id="navbarSupportedContent">
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
@@ -289,9 +292,9 @@
 
         <!-- Indicadores -->
         <ul class="carousel-indicators mb-0">
-            <li data-target="#slide" data-slide-to="0" class="active"></li>
-            <li data-target="#slide" data-slide-to="1"></li>
-            <li data-target="#slide" data-slide-to="2"></li>
+            <li data-target="#slide" data-slide-to="0" class="bg-dark active"></li>
+            <li data-target="#slide" data-slide-to="1" class="bg-dark"></li>
+            <li data-target="#slide" data-slide-to="2" class="bg-dark"></li>
         </ul>
 
         <!-- Slide -->
@@ -371,7 +374,7 @@
 
 
                     <div class="card-body">
-                        <button data-toggle="collapse" data-target="#spda" type="button" class="btn btn-outline-secondary dropdown-toggle">SPDA</button>
+                        <button data-toggle="collapse" data-target="#spda" type="button" class="btn btn-outline-secondary dropdown-toggle">SPDA(Sistemas de Proteção de Descargas Atmosféricas)</button>
                         <div id="spda" class="collapse">
                             <img style="width: 300px; height: auto;" src="..//imagens/spda.png" alt=""> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem tenetur labore ducimus quasi suscipit, veritatis rem sapiente quae itaque nesciunt
                             fuga assumenda expedita libero mollitia placeat omnis in tempora incidunt!
@@ -392,10 +395,10 @@
 
         <!-- Left and right controls -->
         <a class="carousel-control-prev" href="#slide" data-slide="prev">
-            <span class="carousel-control-prev-icon bg-info mr-5"></span>
+            <span class="carousel-control-prev-icon mr-5 setinhaCarrosel"></span>
         </a>
         <a class="carousel-control-next" href="#slide" data-slide="next">
-            <span class="carousel-control-next-icon bg-info ml-5"></span>
+            <span class="carousel-control-next-icon ml-5 setinhaCarrosel"></span>
         </a>
 
     </div>
